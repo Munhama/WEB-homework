@@ -5,6 +5,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Байки из склепа</title>
    <link rel="stylesheet" href="css/style.min.css">
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+   <script src="js/calc.js"></script>
 </head>
 <body>
    <div id="header"><h1>Байки из склепа</h1></div>
@@ -16,7 +19,6 @@
       <p><a href="#">Последние байки</a></p>
    </div>
    
-   <script src="js/calc.js"></script>
    <div id="content">
       <h2>Алтарь демона </h2>
       <p>Утром, при ярком солнечном свете, всё выглядело совсем не так и мрачно, как 
@@ -36,7 +38,7 @@
          <input type="text" id="a" name="a">
          +
          <input type="text" id="b" name="b">
-         <input type="submit" value="=">
+         <input type="submit" id="btn" value="=">
          <p id="result"></p>
       </form>
 
