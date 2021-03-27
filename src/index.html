@@ -32,16 +32,13 @@
          — Ну, как же... Тут кровь..., перья птицы мёртвой..., знаки какие-то страшные нарисованы..., 
          а у вас всё же дети маленькие, они испугаться могут...</p>
          
-         <div class="calculator">
-           
-             <input id="a" placeholder="0">
-             +
-             <input id="b" placeholder="0">
-             <input type="submit" value="=" onclick="calc()">
-          
-             <p id="result"></p>
-            
-         </div>
+      <form action="javascript:calc()">
+         <input type="text" id="a" name="a">
+         +
+         <input type="text" id="b" name="b">
+         <input type="submit" value="=">
+         <p id="result"></p>
+      </form>
 
     </div>
    <div id="footer">&copy; Влад Мержевич</div>
