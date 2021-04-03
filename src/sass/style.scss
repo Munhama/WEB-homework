@@ -46,6 +46,14 @@ body {
             color: red;
         }
     }
+
+    .carousel {
+        display: flex;
+        justify-content: space-around;
+    }
+    .fancybox-bg {
+        background: green;
+    }
 }
 
 @media (max-width: 768px) {
@@ -55,6 +63,9 @@ body {
         }
         #content { /* Правая колонка */
             margin: 5px 5px;
+        }
+        .carousel {
+            display: none;
         }
     }
 }

@@ -5,8 +5,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Байки из склепа</title>
    <link rel="stylesheet" href="css/style.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
-   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
    <script src="js/calc.js"></script>
 </head>
 <body>
@@ -41,6 +44,12 @@
          <input type="submit" id="btn" value="=">
          <p id="result"></p>
       </form>
+
+      <div class="carousel">
+         <a data-fancybox="gallery" href="img/first.jpg"><img src="img/small-first.jpg"></a>
+         <a data-fancybox="gallery" href="img/second.jpg"><img src="img/small-second.jpg"></a>
+         <a data-fancybox="gallery" href="img/third.jpg"><img src="img/small-third.jpg"></a>
+      </div>
 
     </div>
    <div id="footer">&copy; Влад Мержевич</div>
