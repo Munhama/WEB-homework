@@ -10,7 +10,8 @@
    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-   <script src="js/calc.js"></script>
+   <script src="js/vue.js"></script>
+   <script src="js/option_fancybox.js"></script>
 </head>
 <body>
    <div id="header"><h1>Байки из склепа</h1></div>
@@ -36,14 +37,25 @@
          — А что такое? <br />
          — Ну, как же... Тут кровь..., перья птицы мёртвой..., знаки какие-то страшные нарисованы..., 
          а у вас всё же дети маленькие, они испугаться могут...</p>
+
+      <form id="app-calc" v-on:submit.prevent="sum">
+         <input v-model.number="a" type="number">
          
-      <form action="javascript:calc()">
-         <input type="text" id="a" name="a">
-         +
-         <input type="text" id="b" name="b">
-         <input type="submit" id="btn" value="=">
-         <p id="result"></p>
+         <select v-model="op">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+         </select>
+
+         <input v-model.number="b" type="number">
+         
+         <input type="submit" value="=">
+
+         <span>{{res}}</span>
       </form>
+      
+      <script src="js/calc.js"></script>
 
       <div class="carousel">
          <a data-fancybox="gallery" href="img/first.jpg"><img src="img/small-first.jpg"></a>

@@ -1,21 +1,28 @@
-$(document).ready(function() {
-    $('[data-fancybox="gallery"]').fancybox({
-        loop: true,
-        buttons: [
-            "close"
-          ],
-        afterClose: function() {alert("Bye!");},
-    });
-})
-
-function calc() {
-    let a = Number(document.getElementById("a").value);
-    let b = Number(document.getElementById("b").value);
-    $.ajax({
-        type: "POST",
-        url: "../php/calc.php",
-        data: {first:a, second:b}
-    }).done(function(result) {
-        $('#result').html(result);
-    });
-}
+new Vue({
+    el: '#app-calc',
+    data: {
+        a: 0,
+        b: 0,
+        op: '+',
+        res: null,
+    },
+    methods: {
+        sum: function() {
+            switch (this.op) {
+                case '+':
+                    this.res = this.a + this.b;
+                    break;
+                case '-':
+                    this.res = this.a - this.b;
+                    break;
+                case '*':
+                    this.res = this.a * this.b;
+                    break;
+                case '/':
+                    this.res = this.a / this.b;
+                    break;
+            }
+            return this.res;
+        }
+    }
+});
